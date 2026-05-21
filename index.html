@@ -13,10 +13,10 @@
 
       nav {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         max-height: 40px;
-        padding: 10px;
+        padding: 10px 4rem;
       }
 
       nav ul {
@@ -57,9 +57,14 @@
         margin: 0 0 16px 0;
       }
 
-      header div {
+      header #header-white {
         border-radius: 999px;
-        padding: 2px;
+        padding: 8px;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
       }
 
       header button {
@@ -69,7 +74,7 @@
 
       .circle1 {
         width: 20px;
-        background: #000;
+        background: #4691654f;
         height: 20px;
         border-radius: 999px;
         display: flex;
@@ -78,7 +83,7 @@
       }
       .circle2 {
         width: 10px;
-        background: #fff;
+        background: #469165a5;
         height: 10px;
         border-radius: 999px;
         display: flex;
@@ -87,7 +92,7 @@
       }
       .circle3 {
         width: 5px;
-        background: #444;
+        background: #469165;
         height: 5px;
         border-radius: 999px;
         display: flex;
@@ -111,6 +116,9 @@
         align-items: center;
       }
       /* after hero section */
+      .structure-section {
+        padding: 4rem;
+      }
       .section-intro {
         display: flex;
         justify-content: center;
@@ -118,11 +126,13 @@
         flex-direction: column;
       }
       .section-intro > h2 {
-        font-size: 48px;
+        font-size: 4em;
+        padding-bottom: -1.5rem;
       }
       .section-intro > p {
-        font-size: 16px;
+        font-size: 1em;
         color: #627382;
+        padding-bottom: 1.5rem;
       }
 
       .feature-row {
@@ -135,9 +145,9 @@
       }
 
       .feature-card {
-        padding: 40px;
-        max-width: 200px;
-        box-shadow: 0px 0px 8px 0px #7F8783;
+        padding: 24px;
+        max-width: 240px;
+        box-shadow: 0px 0px 8px 0px #7f8783;
       }
 
       .feature-card img {
@@ -146,7 +156,7 @@
         border-radius: 999px;
       }
       .feature-card h4 {
-        font-size: ;
+        font-size: 24px;
       }
 
       .solution-section {
@@ -171,12 +181,15 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        line-height: 2.5;
       }
 
       .cta-section {
+        background-color: #f7f6f2;
         display: flex;
         justify-content: center;
         text-align: center;
+        margin: 1rem 4rem 2rem;
         padding: 40px 20px;
       }
 
@@ -195,15 +208,22 @@
       footer {
         background: #000;
         color: white;
-        padding: 20px;
+        padding: 4rem;
       }
 
       .footer-top {
         display: flex;
         gap: 20px;
         align-items: center;
+        justify-content: space-between;
+        font-size: 1rem;
       }
 
+      .footer-top .social-icons {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+      }
       .footer-bottom {
         margin-top: 16px;
       }
@@ -227,18 +247,11 @@
     </nav>
 
     <header>
-      <div
-        style="
-          background-color: white;
-          width: 200px;
-          display: flex;
-          flex-direction: row;
-        "
-      >
-        <div>Early Access Now Open</div>
+      <div id="header-white">
         <div class="circle1">
           <div class="circle2"><div class="circle3"></div></div>
         </div>
+        <div>Early Access Now Open</div>
       </div>
       <h2 style="font-size: 4em; line-height: 1.2; color: #f1f1f1">
         <span style="color: #469165">Structured thinking, </span>
@@ -259,7 +272,7 @@
       </div>
     </header>
 
-    <section>
+    <section class="structure-section">
       <article>
         <div class="section-intro">
           <h2>Notes don't fail, Structure does.</h2>
@@ -299,7 +312,7 @@
       </article>
     </section>
 
-    <section>
+    <section class="solution-section">
       <figure>
         <img src="./Assets/knowledge.png" alt="Knowledge illustration" />
       </figure>
@@ -316,15 +329,27 @@
           of an interconnected web of understanding.
         </p>
         <ul>
-          <li>Capture ideas with structure built-in from day one</li>
-          <li>Connect related concepts automatically as you write</li>
-          <li>Build lasting knowledge through reflection prompts</li>
-          <li>Find anything instantly with semantic search</li>
+          <li>
+            <img src="./Assets/CheckCircle.png" alt="" />Capture ideas with
+            structure built-in from day one
+          </li>
+          <li>
+            <img src="./Assets/CheckCircle.png" alt="" />Connect related
+            concepts automatically as you write
+          </li>
+          <li>
+            <img src="./Assets/CheckCircle.png" alt="" />Build lasting knowledge
+            through reflection prompts
+          </li>
+          <li>
+            <img src="./Assets/CheckCircle.png" alt="" />Find anything instantly
+            with semantic search
+          </li>
         </ul>
       </article>
     </section>
 
-    <section>
+    <section class="cta-section">
       <article>
         <h3>Ready to think more clearly?</h3>
         <p>
@@ -341,13 +366,15 @@
     </section>
 
     <footer>
-      <div class="">
+      <div class="footer-top">
         <a href=""><img src="./Assets/logo-footer.png" alt="Footer logo" /></a>
         <div>
           <div>Social Links</div>
-          <a href=""><img src="" alt="Social icon" /></a>
-          <a href=""><img src="" alt="Social icon" /></a>
-          <a href=""><img src="" alt="Social icon" /></a>
+          <div class="social-icons">
+            <a href=""><img src="" alt="Social icon" /></a>
+            <a href=""><img src="" alt="Social icon" /></a>
+            <a href=""><img src="" alt="Social icon" /></a>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
